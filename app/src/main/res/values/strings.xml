@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AppinionAssignment</string>
+    <string name="hint">Input text</string>
 </resources>

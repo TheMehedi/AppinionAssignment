@@ -8,48 +8,341 @@
     tools:context=".MainActivity"
     android:background="#F5F5F5">
 
+    <include
+        android:id="@+id/main_page_toolbar"
+        layout="@layout/app_bar_layout"/>
 
-    <LinearLayout
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp">
+        android:layout_marginTop="?attr/actionBarSize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="15dp"
-            android:drawableBottom="@drawable/line"
-            android:drawablePadding="15dp"
-            android:gravity="left"
-            android:text="PG/Sample"
-            android:textColor="@android:color/black"
-            android:textSize="20dp"
-            android:textStyle="bold" />
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="0dp">
 
-
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/userIDTextInputLayout"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp">
-
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/userIDTextInputEditText"
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="User ID"
-                android:imeOptions="actionNext"
-                android:inputType="textCapWords|textNoSuggestions"
-                android:maxLines="1"
-                android:textColorHint="@android:color/black" />
-        </android.support.design.widget.TextInputLayout>
+                android:padding="15dp"
+                android:layout_marginLeft="5dp"
+                android:drawableBottom="@drawable/line"
+                android:drawablePadding="10dp"
+                android:gravity="left"
+                android:text="PG/Sample"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
 
 
-    </LinearLayout>
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="20dp"
+                xmlns:android="http://schemas.android.com/apk/res/android">
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/choosefrom"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:background="@drawable/spinner_background"
+                    />
+                <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="2dp"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:textColor="#000"
+                android:background="#F5F5F5"
+                android:text="Product Group" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="27dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:textColor="#0097A7"
+                    android:text="Choose" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="3"
+                    xmlns:android="http://schemas.android.com/apk/res/android">
+
+                    <android.support.v7.widget.AppCompatSpinner
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="15dp"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:background="@drawable/spinner_background"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="2dp"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:textColor="#000"
+                        android:background="#F5F5F5"
+                        android:text="Literature" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="27dp"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:textColor="#0097A7"
+                        android:text="Choose" />
+                </RelativeLayout>
+
+                <EditText
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="29dp"
+                    android:layout_marginRight="20dp"
+                    android:hint="00"
+                    android:selectAllOnFocus="false"
+                    android:textAlignment="center"
+                    android:background="@drawable/edittext_background"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="3"
+                    xmlns:android="http://schemas.android.com/apk/res/android">
+
+                    <android.support.v7.widget.AppCompatSpinner
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="15dp"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:background="@drawable/spinner_background"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="2dp"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:textColor="#000"
+                        android:background="#F5F5F5"
+                        android:text="Physician Sample" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="27dp"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:textColor="#0097A7"
+                        android:text="Choose" />
+                </RelativeLayout>
+
+                <EditText
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="29dp"
+                    android:layout_marginRight="20dp"
+                    android:hint="00"
+                    android:textAlignment="center"
+                    android:background="@drawable/edittext_background"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="3"
+                    xmlns:android="http://schemas.android.com/apk/res/android">
+
+                    <android.support.v7.widget.AppCompatSpinner
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="15dp"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:background="@drawable/spinner_background" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="2dp"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:textColor="#000"
+                        android:background="#F5F5F5"
+                        android:text="Gift" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="27dp"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:textColor="#0097A7"
+                        android:text="Choose" />
+                </RelativeLayout>
+
+                <EditText
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="29dp"
+                    android:layout_marginRight="20dp"
+                    android:hint="00"
+                    android:textAlignment="center"
+                    android:background="@drawable/edittext_background"/>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableBottom="@drawable/line"
+                android:drawablePadding="20dp"
+                android:gravity="left"
+                android:textColor="@android:color/black"
+                android:textSize="0dp"
+                android:textStyle="bold" />
+
+
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+                xmlns:android="http://schemas.android.com/apk/res/android">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/edittext_background"
+                    android:hint="@string/hint"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="10dp"
+                    android:textColorHint="#0097A7"
+                    android:textSize="14sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="2dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:textColor="#000"
+                    android:background="#F5F5F5"
+                    android:text="Accompanied with"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                xmlns:android="http://schemas.android.com/apk/res/android">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="10dp"
+                    android:background="@drawable/edittext_background"
+                    android:hint="@string/hint"
+                    android:textColorHint="#0097A7"
+                    android:textSize="14sp"
+                    android:gravity="start"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="2dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:textColor="#000"
+                    android:background="#F5F5F5"
+                    android:text="Remarks"/>
+
+            </RelativeLayout>
+
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="42dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:text="Submit"
+                android:textColor="@android:color/white"
+                android:background="@drawable/button_background"/>
+
+
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
 
 
 </android.support.constraint.ConstraintLayout>
