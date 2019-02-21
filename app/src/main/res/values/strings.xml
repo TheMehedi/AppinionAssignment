@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">AppinionAssignment</string>
     <string name="hint">Input text</string>
+    <string name="choose"><font color='#0097A7'>Choose</font></string>
 </resources>

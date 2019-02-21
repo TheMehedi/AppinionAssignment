@@ -3,4 +3,5 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">@android:color/white</color>
     <color name="colorAccent">@android:color/black</color>
+    <color name="colorChoose">#0097A7</color>
 </resources>
